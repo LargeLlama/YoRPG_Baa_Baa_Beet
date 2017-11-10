@@ -1,8 +1,8 @@
 Baa Baa Beet's RPG!
 
-Wubin
-Lynne the Bold
 Bosso
+Lynne the Bold
+Wubin
 
 
 
