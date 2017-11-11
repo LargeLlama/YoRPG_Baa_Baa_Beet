@@ -17,7 +17,7 @@ public class Monster {
 		HP = 150;
 		defense = 20;
 		attackRating = 1;
-		strength = (int)(Math.random() * 46 + 20);
+		strength = (int)((Math.random() * 45) + 20);
 
 	}
 

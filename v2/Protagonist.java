@@ -3,14 +3,10 @@
 //HW28: Ye Olde Role Playing Game
 //2017-11-09
 
-public class Protagonist {
+public class Protagonist extends Character {
 
     //Instance vars
     private String name;
-    private int HP;
-    private int strength;
-    private int defense;
-    private double attackRating;
 
     //Default constructor
     public Protagonist(){
@@ -27,42 +23,10 @@ public class Protagonist {
 		name = givenName;
     }    
 
-    //Return if protagonist is alive
-    //If HP>0, return true
-    //If HP<=0, return false
-    public boolean isAlive(){
-
-        return (HP > 0);
-    }
-    
-    //Return value of defense
-    public int getDefense(){
-
-        return defense;
-    }
-
     //Return value of name
     public String getName(){
 
 		return name;
-    }
-
-    //Lowers HP by inputted damage
-    public void lowerHP (int damageInflicted){
-
-        HP -= damageInflicted;
-    }
-
-     //Calculates damage dealt to inputted monster
-     //Lowers inputted monster's HP by calculated damage
-     //Returns damage dealt
-     public int attack (Monster monster) {
-
-     	int damage = (int)(strength * attackRating) - monster.getDefense();
-
-		monster.lowerHP(damage);
-		
-		return damage;
     }
 
     //Prepares protagonist for special attack

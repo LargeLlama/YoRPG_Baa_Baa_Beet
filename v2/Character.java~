@@ -14,7 +14,7 @@ public class Character {
 	return defense;
     }
 
-    public void lowerHP( int amount ) {
+    public int lowerHP( int amount ) {
 	HP -= amount;
     }
 
