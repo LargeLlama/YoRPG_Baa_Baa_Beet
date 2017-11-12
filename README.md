@@ -7,7 +7,7 @@ Wubin
 
 CHANGELOG  
   
-  v2
+  v2  
   	- Add Character.java file  
 	- Setup inheritence with Protagonist and Monster  
 
