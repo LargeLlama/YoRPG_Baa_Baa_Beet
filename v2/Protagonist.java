@@ -1,7 +1,7 @@
 //Baa Baa Beet (Selina Zou, Rubin Peci, Lynne Wang)
 //APCS1 Period 1
-//HW28: Ye Olde Role Playing Game
-//2017-11-09
+//HW30: Ye Olde Role Playing Game, Improved
+//2017-11-13
 
 public class Protagonist extends Character {
 
