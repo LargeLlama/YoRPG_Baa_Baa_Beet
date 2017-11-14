@@ -7,8 +7,10 @@ Wubin
 
 CHANGELOG  
   
-  v3  
+  v3   
   	- New Protagonist Classes added!  
+	  
+
 		- Water Spirit  
 			- High HP and Defense, low Attack!  
 			  
