@@ -7,12 +7,17 @@ public class Average_Joe extends Protagonist {
 
     //Default constructor
     public Average_Joe() {
-        	name = "Average Joe";
+       	name = "Average Joe";
 		HP = 125;
 		strength = 100;
 		defense = 40;
 		attackRating = .4;
     }
+
+	public Average_Joe(String newName) {
+		this();
+		name = newName;
+	}
 
     //Prepares protagonist for special attack
     //Lowers protagonist defense by 10
@@ -32,8 +37,16 @@ public class Average_Joe extends Protagonist {
 		attackRating = .4;
     }
 
-    public String about() {
-	return "Average Joe is your run-of-the-mill RPG protagonist. He likes to burp, fart, and pick his nose just like any other human being. His defense is 40 and his attackRating is .4 -- both average values that give him a decent chance of survival. He is nothing extraordinary, but even Average Joe can be a hero sometimes.";
-    }
+    public static String about() {
+		String retStr = "";
+		
+		retStr += "Average Joe is your run-of-the-mill RPG protagonist.\n"; 
+		retStr += "\tHe likes to burp, fart, and pick his nose just like any other human being.\n";
+		retStr += "\tHis defense is 40 and his attackRating is .4 -- both average values that give him a decent chance of survival.\n";
+		retStr += "\tHe is nothing extraordinary, but even Average Joe can be a hero sometimes.";
+
+		return retStr;
+
+	}
     
 }

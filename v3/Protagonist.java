@@ -6,8 +6,15 @@
 public class Protagonist extends Character {
 
     //Instance vars
-    protected String name;
+  protected String name;
 
+  public Protagonist(){
+		name = "Player";
+		HP = 125;
+		strength = 100;
+		defense = 40;
+		attackRating = .4;
+    }
     //Overloaded constructor;allows name input
     public Protagonist(String givenName){
 		this();
@@ -20,6 +27,22 @@ public class Protagonist extends Character {
 		return name;
     }
 
-    //main for testing
+
+
+    //main fc void specialize(){
+	public void specialize() {
+		defense -= 10;
+		attackRating += 1;	
+    }
+
+    //Prepares protagonist for normal attack
+    //Resets protagonist defense to 40
+    //Resets protagonist attackRating to .4
+    public void normalize(){
+
+		defense = 40;
+		attackRating = .4;
+    }
 }//end class
+
     

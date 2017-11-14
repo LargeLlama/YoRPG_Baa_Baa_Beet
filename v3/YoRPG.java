@@ -14,7 +14,7 @@ public class YoRPG
   public final static int MAX_ENCOUNTERS = 5;
 
   //each round, a Protagonist and a Monster will be instantiated...
-  private Protagonist pat;   //Is it man or woman?
+  protected Protagonist pat;   //Is it man or woman?
   private Monster smaug; //Friendly generic monster name?
 
   private int moveCount;
@@ -72,12 +72,50 @@ public class YoRPG
     }
     catch ( IOException e ) { }
 
+	
+	s = "~~~~Choose your class~~~~\n";
+
+    s += "\nClasses: \n";
+    s += "\t1: Badass Female Protagonist\n";
+	s += "\t" + Badass_Female_Protagonist.about() + "\n";
+    s += "\t2: Water Spirit\n";
+	s += "\t" + Water_Spirit.about() + "\n";
+    s += "\t3: Average Joe\n";
+	s += "\t" + Average_Joe.about() + "\n";
+    s += "Selection: ";
+    System.out.print( s );
+	pat = new Protagonist(name);
+
+	chooseClass(name, in);
+	System.out.println(pat);
+
+	
     //instantiate the player's character
-    pat = new Protagonist( name );
+}//end newGame()
 
-  }//end newGame()
+public static void chooseClass(String name, BufferedReader in) {
 
+	try {
+		
+		int choice = Integer.parseInt( in.readLine() );
 
+		if (choice == 1) {
+			Protagonist pat = new Badass_Female_Protagonist(); 
+		}
+		else if (choice == 2) {
+			Protagonist pat = new Water_Spirit();
+		}
+		else if (choice == 3) {
+			Protagonist pat = new Average_Joe();
+		}
+		else {
+			System.out.println("Invalid Input, try again!");
+			chooseClass(name, in);
+		}
+
+	}
+	catch (IOException e) { }
+}
   /*=============================================
     boolean playTurn -- simulates a round of combat
     pre:  Protagonist pat has been initialized
