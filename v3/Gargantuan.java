@@ -11,7 +11,7 @@ public class Gargantuan extends Monster {
 		
 		name = "GARGANTUAN";
 		HP = 100;
-		defense = 10;
+		defense = 40;
 		attackRating = 1;
 		strength = (int)((Math.random() * 40) + 30);
 

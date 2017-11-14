@@ -10,10 +10,10 @@ public class Brownie extends Monster {
 	public Brownie() {
 		
 		name = "BROWNIE";
-		HP = 1500;
+		HP = 300;
 		defense = 2;
 		attackRating = .2;
-		strength = (int)((Math.random() * 50) + 30);
+		strength = (int)((Math.random() * 10) + 20);
 
 	}
 
