@@ -3,7 +3,7 @@
 //HW #31: Ye Olde Role Playing Game, Expanded .
 //2017-11-14
 
-public class Nyoom extends Character {
+public class Nyoom extends Monster {
 	
 	private String name;
 
