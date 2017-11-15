@@ -1,7 +1,7 @@
 //Baa Baa Beet (Selina Zou, Rubin Peci, Lynne Wang)
 //APCS1 Period 1
-//HW #31: Ye Olde Role Playing Game, Expanded .
-//2017-11-14
+//HW #32: Ye Olde Role Playing Game, Unchained
+//2017-11-15
 
 public class Water_Spirit extends Protagonist {
 

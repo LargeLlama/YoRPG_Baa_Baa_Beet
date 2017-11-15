@@ -1,24 +1,25 @@
 //Baa Baa Beet (Selina Zou, Rubin Peci, Lynne Wang)
 //APCS1 Period 1
-//HW #31: Ye Olde Role Playing Game, Expanded .
-//2017-11-14
+//HW #32: Ye Olde Role Playing Game, Unchained
+//2017-11-15
 
 public abstract class Protagonist extends Character {
 
     //Instance vars
-  protected String name;
+    protected String name;
 
-  public Protagonist(){
-		name = "Player";
-		HP = 125;
-		strength = 100;
-		defense = 40;
-		attackRating = .4;
+    public Protagonist(){
+	name = "Player";
+	HP = 125;
+	strength = 100;
+	defense = 40;
+	attackRating = .4;
     }
+    
     //Overloaded constructor;allows name input
     public Protagonist(String givenName){
-		this();
-		name = givenName;
+	this();
+	name = givenName;
     }
 
     //Abstract about method
@@ -27,22 +28,16 @@ public abstract class Protagonist extends Character {
     //Return value of name
     public String getName(){
 
-		return name;
+	return name;
     }
-
-
 
     //main fc void specialize(){
-	public abstract void specialize();
-	
-    //Prepares protagonist for normal attack
-    //Resets protagonist defense to 40
-    //Resets protagonist attackRating to .4
-    public void normalize(){
+    public abstract void specialize();
 
-		defense = 40;
-		attackRating = .4;
-    }
+    //Abstract normalize method
+    public abstract void normalize();
+
+     
 }//end class
 
     
