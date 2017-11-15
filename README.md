@@ -7,6 +7,10 @@ Wubin
 
 CHANGELOG  
   
+  
+  v4  
+	- Abstract methods added in Protagonist  
+  
   v3   
   	- New Protagonist Classes added!  
 	  
