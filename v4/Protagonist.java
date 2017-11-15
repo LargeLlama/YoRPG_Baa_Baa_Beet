@@ -33,11 +33,8 @@ public abstract class Protagonist extends Character {
 
 
     //main fc void specialize(){
-	public void specialize() {
-		defense -= 10;
-		attackRating += 1;	
-    }
-
+	public abstract void specialize();
+	
     //Prepares protagonist for normal attack
     //Resets protagonist defense to 40
     //Resets protagonist attackRating to .4
