@@ -1,17 +1,17 @@
 //Baa Baa Beet (Selina Zou, Rubin Peci, Lynne Wang)
 //APCS1 Period 1
-//HW #32: Ye Olde Role Playing Game, Unchained
-//2017-11-15
+//HW #33: Ye Olde Role Playing Game, Realized
+//2017-11-16
 
 public class Average_Joe extends Protagonist {
 
     //Default constructor
     public Average_Joe() {
        	name = "Average Joe";
-		HP = 125;
-		strength = 100;
-		defense = 40;
-		attackRating = .4;
+	HP = 125;
+	strength = 100;
+	defense = 40;
+	attackRating = .4;
     }
 
 	public Average_Joe(String newName) {
