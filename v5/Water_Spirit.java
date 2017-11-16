@@ -37,7 +37,7 @@ public class Water_Spirit extends Protagonist {
 		attackRating = .2;
     }
 
-    public String about() {
+    public static String about() {
 		String retStr = "";
 		
 		retStr += "Water spirits despise battle.\n";

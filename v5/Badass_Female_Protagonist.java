@@ -36,7 +36,7 @@ public class Badass_Female_Protagonist extends Protagonist {
 		attackRating = .6;
     }
 
-    public String about() {
+    public static String about() {
 		String retStr = "";
 		
 		retStr += "She has increased strength and attackRating at the expense of decreased HP and defense.\n";
