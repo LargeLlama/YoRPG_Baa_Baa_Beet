@@ -1,7 +1,7 @@
 //Baa Baa Beet (Selina Zou, Rubin Peci, Lynne Wang)
 //APCS1 Period 1
-//HW #32: Ye Olde Role Playing Game, Unchained
-//2017-11-15
+//HW #33: Ye Olde Role Playing Game, Realized
+//2017-11-16
 
 public abstract class Protagonist extends Character {
 
@@ -14,6 +14,7 @@ public abstract class Protagonist extends Character {
 	strength = 100;
 	defense = 40;
 	attackRating = .4;
+	lives = 1;
     }
     
     //Overloaded constructor;allows name input
