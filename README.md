@@ -22,7 +22,7 @@ Wubin
 <ul> Nyoom<li>High attack, low health and defense</li></ul>
 
 <p> We use input streams and try-catch blocks to take user input to choose what kind of attacks they want to do - normal or special. Normal attacks do less damage than
-special attacks, but special attacks temporarily lower your defense</p>
+special attacks, but special attacks temporarily lower your defense. Special attacks cannot be used back-to-back; the player must use a normal attack between two special.</p>
 <p> For the most part, the on screen prompts are more than enough to play the game - simply clone this repo (use the master branch), and compile the file titled "YoRPG.java" and then run said file. There are several stats that play a role in combat here - HP, attack rating, defense, and strength. Defense negates damage, and HP is simply how much damage it takes to kill you. Attack rating is a multiplier that, with strength, determines how much damage you do per attack. </p>
 <p> You have three lives before the game is over - or until you have run into 10 monsters. </p>
 <p> The difficulty determines how often you run into monsters</p>
@@ -49,7 +49,9 @@ special attacks, but special attacks temporarily lower your defense</p>
 			  
 
 	- Lives system added - Player now has 3 lives before the game ending  
-	- Game prints out health of both Monster and Player  
+	- Game prints out health of both Monster and Player
+	- Limit on special attacks - you cannot use special attacks back-to-back (consecutively)
+		- There must be at least one normal attack separating two special attacks
 
   
   v4  
