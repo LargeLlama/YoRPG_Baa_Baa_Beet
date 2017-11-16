@@ -7,7 +7,7 @@ public class Average_Joe extends Protagonist {
 
     //Default constructor
     public Average_Joe() {
-       	name = "Average Joe";
+    name = "Average Joe";
 	HP = 125;
 	strength = 100;
 	defense = 40;
