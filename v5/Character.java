@@ -40,10 +40,10 @@ public class Character {
     //Lower Character HP by calculated damage
     //Return calculated damage
     public int attack( Character character ) {
-		int damage = (int) (strength * attackRating) - (character.getDefense()/2);
+	int damage = (int) (strength * attackRating) - (character.getDefense()/2);
 
 		if (damage < 0) {
-			damage = 0;
+		    damage = 0;
 		}
 
 		character.lowerHP(damage);

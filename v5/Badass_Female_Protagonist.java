@@ -9,7 +9,7 @@ public class Badass_Female_Protagonist extends Protagonist {
     public Badass_Female_Protagonist() {
        	name = "Scythia Eyegouger";
 		HP = 100;
-		strength = 150;
+		strength = 170;
 		defense = 20;
 		attackRating = .6;
 		maxHP = 100;
@@ -21,17 +21,17 @@ public class Badass_Female_Protagonist extends Protagonist {
 		name = newName;
 	}
     //Prepares protagonist for special attack
-    //Lowers protagonist defense by 15
-    //Increases protagonist attackRating by 1.5
+    //Lowers protagonist defense by 10
+    //Increases protagonist attackRating by .9
     public void specialize(){
 
 		defense -= 10;
-		attackRating += 1.2;	
+		attackRating += .9;	
     }
 
     //Prepares protagonist for normal attack
-    //Resets protagonist defense to 30
-    //Resets protagonist attackRating to .8
+    //Resets protagonist defense to 20
+    //Resets protagonist attackRating to .6
     public void normalize(){
 
 		defense = 20;

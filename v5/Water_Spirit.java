@@ -10,7 +10,7 @@ public class Water_Spirit extends Protagonist {
        	name = "Aelin Bruukhawenn";
 		HP = 175;
 		strength = 70;
-		defense = 60;
+		defense = 40;
 		attackRating = .5;
 		maxHP = 175;
 		lives = 3;
@@ -32,11 +32,11 @@ public class Water_Spirit extends Protagonist {
     }
 
     //Prepares protagonist for normal attack
-    //Resets protagonist defense to 80
+    //Resets protagonist defense to 40
     //Resets protagonist attackRating to .2
     public void normalize(){
 
-		defense = 80;
+		defense = 40;
 		attackRating = .2;
     }
 

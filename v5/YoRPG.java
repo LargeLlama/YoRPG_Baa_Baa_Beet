@@ -143,6 +143,7 @@ public void chooseClass(String name, BufferedReader in) {
     int d1, d2;
     int charLives = pat.getLives();
 	int charMaxHP = pat.getMaxHP(); //original HP
+    int specAttack = 0; //Special Attack can only be used if specAttack < 3
 
     if ( Math.random() >= ( difficulty / 3.0 ) )
 	    System.out.println( "\nNothing to see here. Move along!" );
@@ -171,10 +172,22 @@ public void chooseClass(String name, BufferedReader in) {
         }
         catch ( IOException e ) { }
 
-        if ( i == 2 )
+	//Special attack cannot be used for two consecutive turns (while both protagonist and monster are alive)
+        if ( i == 2 && specAttack < 1) {
+	  specAttack += 1;
+	  System.out.println("Special attack!");
           pat.specialize();
-        else
+	}
+	else if (i == 2 && specAttack > 0) {
+	  System.out.println("You hath spent your specialness. Normalcy it is.");
+	  specAttack = 0;
+	  pat.normalize();
+	}
+	else {
+	  specAttack = 0;
+	  System.out.println("Normal.");
           pat.normalize();
+	}
 
         d1 = pat.attack( smaug );
         d2 = smaug.attack( pat );
