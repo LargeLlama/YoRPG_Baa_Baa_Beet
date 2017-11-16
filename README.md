@@ -5,8 +5,24 @@ Bosso
 Lynne the Bold  
 Wubin  
 
-CHANGELOG  
   
+  
+  <center> <h1> Ye Old RPG! </h1> </center>
+  <center> <h3> The BEST RPG in the market - completely open source and free!</h3> </center>
+  <p> YEAHHHHHHHH BRUDDER </p>
+  <p> An INTENSE text-based RPG with CRAZY features!</p>
+<ul> Water Spirit <li> High HP and Defense, low Attack! </li> </ul>
+<ul>Badass Female Protagonist  
+<li>High Attack and Strength, low HP/Defense! </li> </ul>
+<ul>Average Joe  
+<li>Balanced out traits  </li></ul>
+
+
+			  
+			     
+
+
+<center><h2> CHANGELOG  </h2> </center>
 
   v5  
   	- Added monster subclasses!  
