@@ -17,6 +17,10 @@ Wubin
 <ul>Average Joe  
 <li>Balanced out traits  </li></ul>
 
+<p> Three monster subclasses! </p>
+<ul> Monsters <ul> <li> Brownie </li> <li>High HP, low defense and attack </li> </ul> <ul> <li>  Gargantuan </li><li>High Defense, average HP and low attack  </li></ul> 
+<ul> <li>Nyoom</li><li>High attack, low health and defense</li></ul>
+
 
 			  
 			     
