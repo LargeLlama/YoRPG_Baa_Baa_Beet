@@ -1,7 +1,7 @@
 //Baa Baa Beet (Selina Zou, Rubin Peci, Lynne Wang)
 //APCS1 Period 1
-//HW #32: Ye Olde Role Playing Game, Unchained
-//2017-11-15
+//HW #33: Ye Olde Role Playing Game, Realized
+//2017-11-16
 
 import java.io.*;
 import java.util.*;
@@ -130,6 +130,7 @@ public void chooseClass(String name, BufferedReader in) {
   {
     int i = 1;
     int d1, d2;
+    int charLives = pat.getLives();
 
     if ( Math.random() >= ( difficulty / 3.0 ) )
 	    System.out.println( "\nNothing to see here. Move along!" );
@@ -140,7 +141,13 @@ public void chooseClass(String name, BufferedReader in) {
 
 	    while( smaug.isAlive() && pat.isAlive() ) {
 
-        // Give user the option of using a special attack:
+		if (charLives > pat.getLives()){
+		    System.out.println ("\n" + "The monster has slain you but you still have remaining" + pat.getLives() + "lives");
+		}
+
+		else {
+		
+	// Give user the option of using a special attack:
         // If you land a hit, you incur greater damage,
         // ...but if you get hit, you take more damage.
         try {
