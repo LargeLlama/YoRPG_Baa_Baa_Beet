@@ -17,13 +17,10 @@ public abstract class Protagonist extends Character {
 	strength = 100;
 	defense = 40;
 	attackRating = .4;
-<<<<<<< HEAD
 	lives = 3;
 	kills = 0;
 	maxHP = 125;
-=======
-	lives = 1;
->>>>>>> 09cf014c350a71c5abb1ffd84fd165548905ab21
+	lives = 3;
     }
     
     //Overloaded constructor;allows name input

@@ -9,11 +9,11 @@ public class Water_Spirit extends Protagonist {
     public Water_Spirit() {
        	name = "Aelin Bruukhawenn";
 		HP = 175;
-		strength = 30;
+		strength = 70;
 		defense = 60;
-		attackRating = .2;
+		attackRating = .5;
 		maxHP = 175;
-		lives = 2
+		lives = 3;
 
     }
 

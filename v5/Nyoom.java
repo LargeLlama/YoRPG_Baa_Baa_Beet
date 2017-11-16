@@ -14,7 +14,6 @@ public class Nyoom extends Monster {
 		defense = 5;
 		attackRating = 2;
 		strength = (int)((Math.random() * 50) + 30);
-		lives = 1;
 
 	}
 
@@ -22,7 +21,7 @@ public class Nyoom extends Monster {
 		return name;
 	}
 
-	public static String about() {
+	public String about() {
 		return "The Nyoom is all about hitting hard - it has very low defense, but high attack\nIf you aren't lucky enough to kill it in one hit, good luck!";
 	}
 }

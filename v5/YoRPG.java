@@ -151,9 +151,6 @@ public void chooseClass(String name, BufferedReader in) {
 
 		int choice = (int)(Math.random() * 3);
 
-		System.out.println("\n==========CHOICE===========\n" + choice +"\n\n"); 
-
-
 		if (choice == 0)
 			smaug = new Nyoom();
 		else if (choice == 1) 
@@ -199,7 +196,7 @@ public void chooseClass(String name, BufferedReader in) {
                             "with its dying breath ye olde monster. " +
                             "laid a fatal blow upon thy skull." );
 		pat.lowerLives();
-		System.out.println("You have " + pat.getLives() + " lives/life");
+		System.out.println("\nYou have " + pat.getLives() + " lives/life");
 		pat.setHP(charMaxHP);
 
         return pat.getLives() > 0;
@@ -217,11 +214,11 @@ public void chooseClass(String name, BufferedReader in) {
 		pat.lowerLives();
 		pat.setHP(charMaxHP); //reset health
 
-		System.out.println("You have " + pat.getLives() + " lives/life");
+		System.out.println("\nYou have " + pat.getLives() + " lives/life");
 
         return pat.getLives() > 0;
 	    }
-		System.out.println( "You got " + pat.getKills() + " kill(s)");
+		System.out.println( "\nYou got " + pat.getKills() + " kill(s)");
     }//end else
 
     return true;

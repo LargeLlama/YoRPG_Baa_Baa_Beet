@@ -11,10 +11,9 @@ public class Gargantuan extends Monster {
 		
 		name = "GARGANTUAN";
 		HP = 60;
-		defense = 40;
+		defense = 70;
 		attackRating = 1;
 		strength = (int)((Math.random() * 40) + 20);
-		lives = 2;
 
 	}
 
@@ -22,7 +21,7 @@ public class Gargantuan extends Monster {
 		return name;
 	}
 
-	public static String about() {
+	public String about() {
 		return "The Gargantuan has the highest defense; good luck damaging it!";
 	}
 }

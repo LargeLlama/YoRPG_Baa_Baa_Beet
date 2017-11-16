@@ -12,9 +12,8 @@ public class Brownie extends Monster {
 		name = "BROWNIE";
 		HP = 300;
 		defense = 2;
-		attackRating = .2;
-		strength = (int)((Math.random() * 10) + 20);
-		lives = 1;
+		attackRating = .6;
+		strength = (int)((Math.random() * 10) + 40);
 
 	}
 
@@ -22,7 +21,7 @@ public class Brownie extends Monster {
 		return name;
 	}
 
-	public static String about() {
+	public String about() {
 		return "The Brownie is a little creature who inflicts very litte damage, but who has HP to last a while--you can beat the Brownie, but only if you last long enough!";
 	}
 }
