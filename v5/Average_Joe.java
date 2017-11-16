@@ -12,6 +12,7 @@ public class Average_Joe extends Protagonist {
 	strength = 100;
 	defense = 40;
 	attackRating = .4;
+	maxHP = 125;
     }
 
 	public Average_Joe(String newName) {
@@ -37,7 +38,7 @@ public class Average_Joe extends Protagonist {
 		attackRating = .4;
     }
 
-    public static String about() {
+    public String about() {
 		String retStr = "";
 		
 		retStr += "Average Joe is your run-of-the-mill RPG protagonist.\n"; 

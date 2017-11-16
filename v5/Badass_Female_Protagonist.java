@@ -8,10 +8,11 @@ public class Badass_Female_Protagonist extends Protagonist {
     //Default constructor
     public Badass_Female_Protagonist() {
        	name = "Scythia Eyegouger";
-		HP = 65;
+		HP = 100;
 		strength = 150;
 		defense = 20;
 		attackRating = .6;
+		maxHP = 100;
     }
 
 	public Badass_Female_Protagonist(String newName) {
@@ -36,7 +37,7 @@ public class Badass_Female_Protagonist extends Protagonist {
 		attackRating = .6;
     }
 
-    public static String about() {
+    public String about() {
 		String retStr = "";
 		
 		retStr += "She has increased strength and attackRating at the expense of decreased HP and defense.\n";

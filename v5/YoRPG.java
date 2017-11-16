@@ -11,7 +11,7 @@ public class YoRPG
   // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
 
   //change this constant to set number of encounters in a game
-  public final static int MAX_ENCOUNTERS = 8;
+  public final static int MAX_ENCOUNTERS = 5;
 
   //each round, a Protagonist and a Monster will be instantiated...
   protected Protagonist pat;   //Is it man or woman?
@@ -71,21 +71,35 @@ public class YoRPG
 	    name = in.readLine();
     }
     catch ( IOException e ) { }
+	
+	System.out.println("Here is some info on the monsters!");
+	Nyoom A = new Nyoom();
+	Brownie B = new Brownie();
+	Gargantuan C = new Gargantuan();
 
+	System.out.println("NYOOM\n" + A.about());
+	System.out.println("\nBROWNIE\n"  + B.about());
+	System.out.println("\nGARGANTUAN\n" + C.about());
+
+	Protagonist a = new Badass_Female_Protagonist();
+    Protagonist b = new Water_Spirit();
+    Protagonist c = new Average_Joe();
+
+	
 	s = "~~~~Choose your class~~~~\n";
 
     s += "\nClasses: \n";
     s += "\t1: Badass Female Protagonist\n";
-    s += "\t" + Badass_Female_Protagonist.about() + "\n";
+    s += "\t" + a.about() + "\n";
     s += "\t2: Water Spirit\n";
-    s += "\t" + Water_Spirit.about() + "\n";
+    s += "\t" + b.about() + "\n";
     s += "\t3: Average Joe\n";
-    s += "\t" + Average_Joe.about() + "\n";
+    s += "\t" +c.about() + "\n";
     s += "Selection: ";
-    System.out.print( s );
+	System.out.print( s );
+
 
     chooseClass(name, in);
-	System.out.println(pat);
 
 	
     //instantiate the player's character
@@ -98,13 +112,13 @@ public void chooseClass(String name, BufferedReader in) {
 		int choice = Integer.parseInt( in.readLine() );
 
 		if (choice == 1) {
-		        pat = new Badass_Female_Protagonist(); 
+		        pat = new Badass_Female_Protagonist(name); 
 		}
 		else if (choice == 2) {
-		        pat = new Water_Spirit();
+		        pat = new Water_Spirit(name);
 		}
 		else if (choice == 3) {
-		        pat = new Average_Joe();
+		        pat = new Average_Joe(name);
 		}
 		else {
 			System.out.println("Invalid Input, try again!");
@@ -115,6 +129,8 @@ public void chooseClass(String name, BufferedReader in) {
 	catch (IOException e) { }
 
 }
+
+
   /*=============================================
     boolean playTurn -- simulates a round of combat
     pre:  Protagonist pat has been initialized
@@ -126,21 +142,27 @@ public void chooseClass(String name, BufferedReader in) {
     int i = 1;
     int d1, d2;
     int charLives = pat.getLives();
+	int charMaxHP = pat.getMaxHP(); //original HP
 
     if ( Math.random() >= ( difficulty / 3.0 ) )
 	    System.out.println( "\nNothing to see here. Move along!" );
     else {
 	    System.out.println( "\nLo, yonder monster approacheth!" );
 
-	    smaug = new Monster();
+		int choice = (int)(Math.random() * 3);
 
-	    while( smaug.isAlive() && pat.isAlive() ) {
+		System.out.println("\n==========CHOICE===========\n" + choice +"\n\n"); 
 
-		if (charLives > pat.getLives()){
-		    System.out.println ("\n" + "The monster has slain you but you still have remaining" + pat.getLives() + "lives");
-		}
 
-		else {
+		if (choice == 0)
+			smaug = new Nyoom();
+		else if (choice == 1) 
+			smaug = new Brownie();
+		else
+			smaug = new Gargantuan();
+
+		System.out.println("\nThis monster is...." + smaug.getName());
+		    while( smaug.isAlive() && pat.isAlive() ) {
 		
 	// Give user the option of using a special attack:
         // If you land a hit, you incur greater damage,
@@ -165,26 +187,41 @@ public void chooseClass(String name, BufferedReader in) {
 
         System.out.println( "\n" + "Ye Olde Monster smacked " + pat.getName() +
                             " for " + d2 + " points of damage.");
+
+		System.out.println("\nDoctor's report\n" + pat.getName() +": " + pat.getHP() + "HP");
+		System.out.println("Monster: " + smaug.getHP() + "HP");
 	    }//end while
 
 	    //option 1: you & the monster perish
-	    if ( !smaug.isAlive() && !pat.isAlive() ) {
+	    if ( !smaug.isAlive() && pat.getHP() <= 0) {
         System.out.println( "'Twas an epic battle, to be sure... " + 
                             "You cut ye olde monster down, but " +
                             "with its dying breath ye olde monster. " +
                             "laid a fatal blow upon thy skull." );
-        return false;
+		pat.lowerLives();
+		System.out.println("You have " + pat.getLives() + " lives/life");
+		pat.setHP(charMaxHP);
+
+        return pat.getLives() > 0;
 	    }
 	    //option 2: you slay the beast
 	    else if ( !smaug.isAlive() ) {
         System.out.println( "HuzzaaH! Ye olde monster hath been slain!" );
+		pat.addKill();
         return true;
 	    }
 	    //option 3: the beast slays you
-	    else if ( !pat.isAlive() ) {
+	    else if ( pat.getHP() <= 0) {
         System.out.println( "Ye olde self hath expired. You got dead." );
-        return false;
+		
+		pat.lowerLives();
+		pat.setHP(charMaxHP); //reset health
+
+		System.out.println("You have " + pat.getLives() + " lives/life");
+
+        return pat.getLives() > 0;
 	    }
+		System.out.println( "You got " + pat.getKills() + " kill(s)");
     }//end else
 
     return true;

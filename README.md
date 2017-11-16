@@ -7,6 +7,24 @@ Wubin
 
 CHANGELOG  
   
+
+  v5  
+  	- Added monster subclasses!  
+	  
+
+		- Brownie  
+			- High HP, low defense and attack  
+
+		- Gargantuan  
+			- High Defense, average HP and low attack  
+
+		- Nyoom  
+			- High attack, low health and defense  
+			  
+
+	- Lives system added - Player now has 3 lives before the game ending  
+	- Game prints out health of both Monster and Player  
+
   
   v4  
 	- Abstract methods added in Protagonist  

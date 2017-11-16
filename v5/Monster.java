@@ -3,7 +3,7 @@
 //HW #33: Ye Olde Role Playing Game, Realized
 //2017-11-16
 
-public class Monster extends Character {
+public abstract class Monster extends Character {
 	
 	private String name;
 
@@ -13,7 +13,6 @@ public class Monster extends Character {
 		defense = 20;
 		attackRating = 1;
 		strength = (int)((Math.random() * 46) + 20);
-		lives = 1;
 
 	}
 
@@ -25,4 +24,6 @@ public class Monster extends Character {
 	public String getName() {
 		return name;
 	}
+
+	public abstract String about();
 }

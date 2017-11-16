@@ -16,6 +16,10 @@ public class Character {
 		return HP > 0;
     }
 
+	public int getHP() {
+		return HP;
+	}
+
     //Return value of defense
     public int getDefense() {
 		return defense;
@@ -25,6 +29,10 @@ public class Character {
     public void lowerHP( int amount ) {
 		HP -= amount;
     }
+
+	public void setHP(int amount) {
+		HP = amount;
+	}
 
     //Attack method:
     //Calculate damage
@@ -36,6 +44,7 @@ public class Character {
 		if (damage < 0) {
 			damage = 0;
 		}
+
 		character.lowerHP(damage);
 
 		return damage;
