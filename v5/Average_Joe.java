@@ -13,6 +13,7 @@ public class Average_Joe extends Protagonist {
 	defense = 40;
 	attackRating = .4;
 	maxHP = 125;
+	lives = 1;
     }
 
 	public Average_Joe(String newName) {
