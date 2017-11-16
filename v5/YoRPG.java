@@ -11,7 +11,7 @@ public class YoRPG
   // ~~~~~~~~~~~ INSTANCE VARIABLES ~~~~~~~~~~~
 
   //change this constant to set number of encounters in a game
-  public final static int MAX_ENCOUNTERS = 5;
+  public final static int MAX_ENCOUNTERS = 8;
 
   //each round, a Protagonist and a Monster will be instantiated...
   protected Protagonist pat;   //Is it man or woman?
@@ -72,24 +72,19 @@ public class YoRPG
     }
     catch ( IOException e ) { }
 
-    Protagonist a = new Badass_Female_Protagonist();
-    Protagonist b = new Water_Spirit();
-    Protagonist c = new Average_Joe();
-
-	
 	s = "~~~~Choose your class~~~~\n";
 
     s += "\nClasses: \n";
     s += "\t1: Badass Female Protagonist\n";
-    s += "\t" + ((Protagonist)a).about() + "\n";
+    s += "\t" + Badass_Female_Protagonist.about() + "\n";
     s += "\t2: Water Spirit\n";
-    s += "\t" + ((Protagonist)b).about() + "\n";
+    s += "\t" + Water_Spirit.about() + "\n";
     s += "\t3: Average Joe\n";
-    s += "\t" + ((Protagonist)c).about() + "\n";
+    s += "\t" + Average_Joe.about() + "\n";
     s += "Selection: ";
     System.out.print( s );
 
-        chooseClass(name, in);
+    chooseClass(name, in);
 	System.out.println(pat);
 
 	
